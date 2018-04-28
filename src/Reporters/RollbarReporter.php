@@ -1,6 +1,6 @@
 <?php
 
-namespace Optimus\Heimdal\Reporters;
+namespace Iphuongtt\Heimdal\Reporters;
 
 use Exception;
 use Rollbar;

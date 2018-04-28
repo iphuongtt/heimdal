@@ -2,8 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use Optimus\Heimdal\ExceptionHandler;
-use Optimus\Heimdal\Formatters\BaseFormatter;
+use Iphuongtt\Heimdal\ExceptionHandler;
+use Iphuongtt\Heimdal\Formatters\BaseFormatter;
 use Orchestra\Testbench\TestCase;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -30,7 +30,7 @@ class ExceptionHandlerTest extends TestCase {
     {
         parent::setUp();
 
-        app()['config']->set('optimus.heimdal', getConfigStub());
+        app()['config']->set('iphuongtt.heimdal', getConfigStub());
     }
 
     /**
@@ -84,7 +84,7 @@ class ExceptionHandlerTest extends TestCase {
 
     public function testRendersAppropriateFormatter()
     {
-        app()['config']->set('optimus.heimdal.formatters', [
+        app()['config']->set('iphuongtt.heimdal.formatters', [
             HttpException::class => HttpExceptionFormatter::class,
             Exception::class => ExceptionFormatter::class
         ]);

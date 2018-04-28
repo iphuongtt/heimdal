@@ -1,6 +1,6 @@
 <?php
 
-use Optimus\Heimdal\Reporters\ReporterInterface;
+use Iphuongtt\Heimdal\Reporters\ReporterInterface;
 
 class TestReporter implements ReporterInterface
 {
@@ -19,7 +19,7 @@ class TestReporter implements ReporterInterface
 
 function getConfigStub()
 {
-    $config = require __DIR__.'/../src/config/optimus.heimdal.php';
+    $config = require __DIR__.'/../src/config/iphuongtt.heimdal.php';
 
     $reporterMock = \Mockery::mock('ReporterClass');
 
